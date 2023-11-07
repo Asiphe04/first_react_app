@@ -11,6 +11,11 @@ function MyButton() {
 }
 
 function App() {
+  const user = {
+    name: 'Asiphe Ndimlana',
+    imageUrl: 'https://i.postimg.cc/vm30rsCN/download.png',
+    imageSize: 90,
+  };
   const [counter , setCounter] = useState(0);
   return (
     <div className="App">
@@ -20,7 +25,18 @@ function App() {
       <button onClick={() => setCounter((prevCount) => prevCount + 1) }>+</button>
      <br/>
       <MyButton />
-
+      <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
 
     </div>
   );
