@@ -11,12 +11,14 @@ function MyButton() {
 }
 
 function App() {
+  
   const user = {
-    name: 'Asiphe Ndimlana',
+    name: 'Life Chocies Academy',
     imageUrl: 'https://i.postimg.cc/vm30rsCN/download.png',
     imageSize: 90,
   };
   const [counter , setCounter] = useState(0);
+
   return (
     <div className="App">
       <button onClick={() => setCounter((prevCount) => prevCount - 1) }>-</button>
